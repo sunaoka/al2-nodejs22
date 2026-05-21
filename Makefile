@@ -7,10 +7,11 @@ MOUNT := -v ./rpmbuild/SOURCES:/root/rpmbuild/SOURCES \
          -v ./rpmbuild/RPMS:/root/rpmbuild/RPMS \
          -v ./rpmbuild/SRPMS:/root/rpmbuild/SRPMS
 
-SOURCES := rpmbuild/SOURCES/nodejs-keyring.kbx \
-           rpmbuild/SOURCES/SHASUMS256.txt.asc \
-           rpmbuild/SOURCES/SHASUMS256.txt \
-           rpmbuild/SOURCES/node-v$(NODEJS_VERSION).tar.xz
+INTERMEDIATES := rpmbuild/SOURCES/nodejs-keyring.kbx \
+                 rpmbuild/SOURCES/SHASUMS256.txt.asc \
+                 rpmbuild/SOURCES/SHASUMS256.txt
+
+SOURCES := rpmbuild/SOURCES/node-v$(NODEJS_VERSION).tar.xz
 
 TARGET := build-arm64 \
           build-amd64
@@ -38,6 +39,8 @@ build-%:
 
 clean:
 	-$(RM) -r rpmbuild/{RPMS,SRPMS}
-	-$(RM) $(SOURCES)
+	-$(RM) $(SOURCES) $(INTERMEDIATES)
+
+.INTERMEDIATE: $(INTERMEDIATES)
 
 .PHONY: all build clean
