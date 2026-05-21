@@ -17,4 +17,4 @@ EOT
 
 FROM base
 
-CMD ["rpmbuild", "-ba", "--clean", "/root/rpmbuild/SPECS/nodejs.spec"]
+CMD ["rpmbuild", "-ba", "--clean", "/root/rpmbuild/SPECS/nodejs22.spec"]
