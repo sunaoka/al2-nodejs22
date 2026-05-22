@@ -1,5 +1,5 @@
 Name:           nodejs
-Version:        22.22.2
+Version:        22.22.3
 Release:        1%{?dist}
 Summary:        JavaScript runtime built on Chrome's V8 engine
 
