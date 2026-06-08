@@ -72,5 +72,8 @@ export PATH=%{buildroot}%{_bindir}:$PATH
 %doc %{_datadir}/doc/node/
 
 %changelog
+* Tue May 22 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 22.22.3-1.amzn2
+- Update to 22.22.3
+
 * Tue May 12 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 22.22.2-1.amzn2
 - Initial build for Amazon Linux 2
