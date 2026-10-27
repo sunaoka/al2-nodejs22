@@ -1,5 +1,5 @@
 Name:           nodejs
-Version:        22.22.3
+Version:        22.23.4
 Release:        1%{?dist}
 Summary:        JavaScript runtime built on Chrome's V8 engine
 
@@ -72,6 +72,12 @@ export PATH=%{buildroot}%{_bindir}:$PATH
 %doc %{_datadir}/doc/node/
 
 %changelog
+* Tue Oct 27 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 22.23.4-1.amzn2
+- Update to 22.23.4
+
+* Thu Jun 25 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 22.23.1-1.amzn2
+- Update to 22.23.1
+
 * Tue May 22 2026 SUNAOKA Norifumi <sunaoka@pocari.org> - 22.22.3-1.amzn2
 - Update to 22.22.3
 

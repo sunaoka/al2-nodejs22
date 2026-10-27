@@ -1,4 +1,4 @@
-NODEJS_VERSION := 22.22.3
+NODEJS_VERSION := 22.23.4
 
 IMAGE := node-v$(NODEJS_VERSION)-builder
 
